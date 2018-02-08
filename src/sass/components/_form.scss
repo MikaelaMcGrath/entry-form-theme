@@ -1,0 +1,31 @@
+.fieldset-legend {
+	font-size: 1.7em;
+	font-weight: $light-font-weight;
+}
+.webform-type-radios {
+	.fieldset-legend {
+		font-weight: $bold-font-weight;
+		font-size: 1em;
+		margin-bottom: 0.375em;
+		display: block;
+	}
+}
+.description {
+	margin-bottom: 0.375em;
+}
+.form-type-radio {
+	display: inline;
+	padding-right: $horz-spacing-unit * 2;
+}
+.red {
+	color: $alert;
+	margin-top: 0.375em;
+	
+}
+select {
+	border-color: $light-grey;
+	background-color: $white;
+	height: 40px;
+	border-radius: 3px;
+	box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
+}

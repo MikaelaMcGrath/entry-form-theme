@@ -1,0 +1,25 @@
+.l-header {
+	.search {
+		display: none;
+		visibility: hidden;
+		width: 100%;
+		background: $base;
+		clear: both;
+		padding: 0;
+}
+}
+@include breakpoint(tablet) {
+	.l-header {
+		.search {
+			visibility: visible;
+			padding: $vert-spacing-unit/2 $horz-spacing-unit/2;
+			border-top: none;
+			background: $accent;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			flex: 0 1 23%;
+			
+		}
+	}
+}

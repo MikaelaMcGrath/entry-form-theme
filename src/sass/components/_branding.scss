@@ -1,0 +1,62 @@
+.l-branding {
+	background: $accent;
+	box-shadow: 0px 1px 10px 0px #000000;
+	position: relative;
+	z-index: 10;
+	min-height: 46px;
+	.logos {
+		display: flex; 
+		flex-wrap: nowrap;
+		align-items: center;
+		position: absolute;
+		padding: 0 $horz-spacing-unit;
+		top: 0;
+		flex: 2 1 auto;
+		height: 45px;
+		.aus-crest {
+			width: 130px;
+			margin-right: $horz-spacing-unit;
+			height: 100%;
+		}
+		.centenary {
+			width: 40px;
+		}
+		img {
+			display: block;
+			height: 100%;
+		}
+	}
+}
+@include breakpoint(tablet) {
+	.l-branding {
+		display: flex;
+		padding: 0 $horz-spacing-unit;
+		justify-content: space-between;
+		height: $menu-height;
+		.logos {
+			padding: 0;
+			position: relative;
+			//top: 2;
+			height: 70px;
+			.aus-crest {
+				width: 200px;
+				display: none;
+			}
+			.centenary {
+				width: 50px;
+			}
+		}
+	}
+}
+@include breakpoint(desktop) {
+	.l-branding {
+		.logos {
+			.aus-crest {
+				display: block;
+			}
+			.centenary {
+				width: 60px;
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+entry-form-theme-libraries:
+  css:
+    theme:
+      css/entry-form-theme.style.css: {}
+  js:
+    js/entry-form-theme.script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

@@ -1,0 +1,39 @@
+html {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+.l-header, .l-content {
+	@include clearfix;
+}
+.middle-wrapper {
+	.right-sidebar-wrapper {
+		padding: $all-round;
+	}
+}
+@include breakpoint(tablet) {
+	.middle-wrapper {
+		display: flex;
+		justify-content: space-around;
+		.left-sidebar-wrapper {
+			flex: 0 1 25%;
+		}
+		.right-sidebar-wrapper {
+			flex: 0 1 75%;
+			padding: $vert-spacing-unit $horz-spacing-unit *3;
+		}
+	}
+}

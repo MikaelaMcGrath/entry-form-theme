@@ -1,0 +1,28 @@
+body {
+    background-color: white;
+    color: $grey;
+    line-height: 150%;
+}
+.element-invisible {
+	font-size: 0;
+	position: absolute;
+	clip: rect(1px,1px,1px,1px);
+	overflow: hidden;
+	height: 1px;
+}
+.middle-wrapper {
+	display: flex;
+	justify-content: space-around;
+}
+.l-main {
+	background-color: $light-grey;
+}
+.content-wrapper {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+	background-color: $white;
+}
+ul.menu {
+	margin: 0;
+}

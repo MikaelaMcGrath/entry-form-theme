@@ -1,0 +1,7 @@
+name: Entry form gulp theme
+type: theme
+description: Theme for gulp in Drupal 8
+core: 8.x
+base theme: classy
+libraries:
+  - entry_form_theme/entry-form-theme-libraries

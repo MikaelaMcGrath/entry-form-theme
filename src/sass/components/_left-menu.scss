@@ -1,0 +1,127 @@
+.left-sidebar-wrapper {
+	.left-menu, .conflicts-menu, .left-menu-footer, .left-book-menu {
+		background-color: $light-base;
+		display: none;
+		ul {
+			padding: 0;
+			li {
+				list-style: none;
+				a {
+					padding: $vert-spacing-unit/2 $horz-spacing-unit;
+					display: block;
+					position: relative;
+					color: $white;
+					border-bottom: 1px solid lighten($dark-base, 5%);
+					text-decoration: none;
+					&.active {
+						font-weight: $bold-font-weight;
+					}
+					&:hover, &:focus {
+						background-color: $secondary;
+					}
+				}
+				ul {
+					background-color: $base;
+					ul {
+						background-color: $dark-base;
+					}
+				}
+			}
+		}
+	}
+	.left-menu {
+		ul {
+			&> li {
+				display: none;
+				&.active-trail {
+					display: list-item;
+				}
+				&> ul {
+					background-color: $light-base;
+					&> li {
+						display: list-item;
+						&.expanded {
+							background-color: $base;
+							&> a {
+								padding-right: $horz-spacing-unit *2;
+								&:after {
+									content: '\025BE';
+									position: absolute;
+									right: $horz-spacing-unit;
+									top: 5px;
+									color: $white;
+									font-size: $base-font-size * 1.2;
+								}
+							}
+							&.active-trail {
+								font-weight: $bold-font-weight;
+							}
+						}
+						&.collapsed {
+							&> a {
+								padding-right: $horz-spacing-unit *2;
+								&:after {
+									content: '\025B8';
+									position: absolute;
+									right: $horz-spacing-unit;
+									top: 5px;
+									color: $white;
+									font-size: $base-font-size * 1.2;
+								}
+							}
+						}
+						ul {
+							background-color: $dark-base;
+							li {
+								&.expanded {
+									background-color: $dark-base;
+								}
+								a {
+									//padding: $vert-spacing-unit/2 $horz-spacing-unit $vert-spacing-unit/2 $horz-spacing-unit*2;
+									&:after {
+										display: none;
+									}
+								}
+								&.menu-mlid-1637  {
+
+								li:first-child, li:nth-child(2) {
+											display: list-item;
+											
+										}
+										a:after {
+												display: block;
+											}
+										}
+								ul {
+
+									li {
+										background-color: darken($dark-base, 10%);
+										display: none;
+										&.active-trail {
+											display: none;
+										}
+										a {
+											padding-left: $vert-spacing-unit*2;
+										}
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+}
+
+@include breakpoint(tablet) {
+
+			.left-sidebar-wrapper {
+		.left-menu {
+			display: block;
+		}
+	}
+}
